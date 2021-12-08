@@ -30,3 +30,8 @@ Run `ng serve` for development.
 * sorting the products by price and by ABC
 * add a search field to enable searching by title
 * style the app and components to look better ;)
+
+
+# WHEN YOU'RE DONE
+
+open a PR to our repository
