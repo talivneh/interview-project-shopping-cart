@@ -1,2 +1,12 @@
-<div>{{product.title}}</div><button (click)="addProductToCart(product)">+</button>
-<div>{{product.price.toLocaleString('en-US', {style: 'currency', currency: 'USD'})}}</div>
+<div id="productDiv">
+  <div id="productTitle">{{ product.title }}</div>
+  <div>
+    {{
+      product.price.toLocaleString("en-US", {
+        style: "currency",
+        currency: "USD"
+      })
+    }}
+  </div>
+  <button (click)="addProductToCart(product)">+</button>
+</div>
