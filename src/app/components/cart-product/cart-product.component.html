@@ -1,5 +1,13 @@
-
 <div *ngIf="product">
-  <div>{{product.title}}</div>
-  amount: {{product.quantity}}
+  <div>{{ product.title }}</div>
+  <button (click)="changQuantity(product, 'add', 1)">+</button>
+  <input
+    type="number"
+    value="{{ product.quantity }}"
+    (input)="changQuantity(product, 'change', $event.target.value)"
+  />
+  <button (click)="changQuantity(product, 'remove', 1)">-</button>
+  <button id="{{ product.id }}" (click)="removeProductFromCart(product)">
+    Remove
+  </button>
 </div>

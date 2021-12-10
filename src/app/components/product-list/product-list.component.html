@@ -1,3 +1,13 @@
 <h1>Products</h1>
-
-<app-product *ngFor="let product of products" [product]="product" (productAdded)="addProductToCart($event)"></app-product>
+<button (click)="sortList('price')">Sort By Price</button>
+<button (click)="sortList('title')">Sort By Name</button>
+<input
+  type="text"
+  placeholder="Serch Products By Name"
+  (input)="filterList($event.target.value)"
+/>
+<app-product
+  *ngFor="let product of filterdProducts"
+  [product]="product"
+  (productAdded)="addProductToCart($event)"
+></app-product>
