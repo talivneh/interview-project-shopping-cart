@@ -8,8 +8,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class ProductListComponent implements OnInit {
   constructor() {}
   @Input() products: any[];
-  @Input() filterdProducts: any[];
   @Output() productAdded = new EventEmitter();
+  filterdProducts: any[];
 
   ngOnInit(): void {
     this.filterdProducts = this.products;
