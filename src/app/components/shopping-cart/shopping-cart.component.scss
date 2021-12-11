@@ -1,0 +1,31 @@
+@media (min-width: "770px") {
+  #shopping-cart-container {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    align-items: center;
+    min-height: 95vh;
+    max-height: 95vh;
+    width: 35vw;
+  }
+}
+
+#shopping-cart-container {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+#sopping-cart-produt-list {
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  visibility: hidden;
+}
+h1 > span {
+  color: #b0c4de;
+}
+
+h2 {
+  color: gray;
+}

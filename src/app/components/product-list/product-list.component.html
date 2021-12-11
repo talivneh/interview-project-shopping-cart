@@ -1,13 +1,21 @@
-<div id="prodactList">
-  <h1>Products</h1>
-  <div id="controlListDiv">
-    <button (click)="sortList('price')">Sort By Price</button>
-    <button (click)="sortList('title')">Sort By Name</button>
-    <input
-      type="text"
-      placeholder="Serch Products By Name"
-      (input)="filterList($event.target.value)"
-    />
+<div class="flex px-3">
+  <h1 class="text-center">Products</h1>
+  <div class="d-flex row justify-content-center py-3 align-content-around">
+    <div class="col-sm-7 row justify-content-around align-content-around">
+      <button class="col-5 btn btn-primary shadow" (click)="sortList('price')">
+        Sort By Price
+      </button>
+      <button class="col-5 btn btn-primary shadow" (click)="sortList('title')">
+        Sort By Name
+      </button>
+    </div>
+    <div class="mt-3 mt-sm-0 col-10 col-sm-5 justify-content-center d-flex">
+      <input
+        type="text"
+        placeholder="Serch Products By Name"
+        (input)="filterList($event.target.value)"
+      />
+    </div>
   </div>
   <app-product
     *ngFor="let product of filterdProducts"

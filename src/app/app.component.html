@@ -1,11 +1,14 @@
-<app-product-list
-  (productAdded)="addProductToCart($event)"
-  [products]="productList"
->
-</app-product-list>
-
-<app-shopping-cart
-  (productRemoved)="removeProductFromCart($event)"
-  [products]="cartProductList"
->
-</app-shopping-cart>
+<div id="appContainer" class="d-md-flex justify-content-between px-2">
+  <app-product-list
+    class="col-7"
+    (productAdded)="addProductToCart($event)"
+    [products]="productList"
+  >
+  </app-product-list>
+  <app-shopping-cart
+    class="flex-shrink col-5"
+    (productRemoved)="removeProductFromCart($event)"
+    [products]="cartProductList"
+  >
+  </app-shopping-cart>
+</div>

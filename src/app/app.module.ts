@@ -8,6 +8,7 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { ProductComponent } from './components/product/product.component';
 import { FormsModule } from '@angular/forms';
 import { CartProductComponent } from './components/cart-product/cart-product.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { CartProductComponent } from './components/cart-product/cart-product.com
     ProductComponent,
     CartProductComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
 })

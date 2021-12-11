@@ -1,6 +1,8 @@
-<div id="productDiv">
-  <div id="productTitle">{{ product.title }}</div>
-  <div>
+<div
+  class="row d-flex justify-content-between my-3 bg-light p-2 rounded shadow-sm"
+>
+  <div class="col-7 text-truncate">{{ product.title }}</div>
+  <div class="col-2">
     {{
       product.price.toLocaleString("en-US", {
         style: "currency",
@@ -8,5 +10,12 @@
       })
     }}
   </div>
-  <button (click)="addProductToCart(product)">+</button>
+  <div class="col-1 mr-3">
+    <button
+      class="btn btn-warning shadow-sm rounded-circle"
+      (click)="addProductToCart(product)"
+    >
+      +
+    </button>
+  </div>
 </div>

@@ -1,13 +1,34 @@
-<div *ngIf="product">
-  <div>{{ product.title }}</div>
-  <button (click)="changQuantity(product, 'add', 1)">+</button>
-  <input
-    type="number"
-    value="{{ product.quantity }}"
-    (input)="changQuantity(product, 'change', $event.target.value)"
-  />
-  <button (click)="changQuantity(product, 'remove', 1)">-</button>
-  <button id="{{ product.id }}" (click)="removeProductFromCart(product)">
-    Remove
-  </button>
+<div *ngIf="product" id="product-in-cart" class="d-flex row">
+  <div class="text-truncate col">
+    {{ product.title }}
+  </div>
+  <div class="col d-flex">
+    <div class="d-flex">
+      <button
+        class="quant-btn col-2 rounded btn btn-light"
+        (click)="changQuantity(product, 'add', 1)"
+      >
+        +
+      </button>
+      <input
+        class="col-4"
+        type="number"
+        value="{{ product.quantity }}"
+        (input)="changQuantity(product, 'change', $event.target.value)"
+      />
+      <button
+        class="quant-btn col-2 rounded btn btn-light"
+        (click)="changQuantity(product, 'remove', 1)"
+      >
+        -
+      </button>
+    </div>
+    <button
+      class="col btn btn-danger"
+      id="{{ product.id }}"
+      (click)="removeProductFromCart(product)"
+    >
+      Remove
+    </button>
+  </div>
 </div>

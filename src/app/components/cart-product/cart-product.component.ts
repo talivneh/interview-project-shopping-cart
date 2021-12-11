@@ -19,12 +19,11 @@ export class CartProductComponent {
     if (eventName == 'add') {
       product.quantity++;
     }
-    if (eventName == 'remove') {
+    if (eventName == 'remove' && product.quantity > 1) {
       product.quantity--;
     }
-    if (eventName == 'change') {
+    if (eventName == 'change' && number >= 1) {
       product.quantity = Number(number);
     }
-    console.log(product.quantity);
   }
 }

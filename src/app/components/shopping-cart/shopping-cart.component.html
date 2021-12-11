@@ -1,10 +1,16 @@
-<h1>Shopping Cart ({{ calcTotal() }})</h1>
-<app-cart-product
-  *ngFor="let product of products"
-  [product]="product"
-  (productRemoved)="removeProductFromCart($event)"
-></app-cart-product>
-<h2>
-  total Cart Price
-  {{ calcTotalPrice() }}
-</h2>
+<div id="shopping-cart-container" class="d-flex flex-column">
+  <h1 class="text-center justify-self-start my-2">
+    Shopping Cart <span> ({{ calcTotal() }})</span>
+  </h1>
+  <div id="sopping-cart-produt-list" class="w-100">
+    <app-cart-product
+      *ngFor="let product of products"
+      [product]="product"
+      (productRemoved)="removeProductFromCart($event)"
+    ></app-cart-product>
+  </div>
+  <h2 class="text-center mt-auto">
+    Total Cart Price
+    {{ calcTotalPrice() }}
+  </h2>
+</div>
